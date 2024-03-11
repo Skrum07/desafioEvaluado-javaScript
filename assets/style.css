@@ -1,0 +1,33 @@
+/* Ejercicio N1 */
+
+/* .error {
+    color: red;
+}
+.success {
+    color: green;
+} */
+
+/* --------------------------------- */
+
+/* Ejercicio N2 */
+
+.color-selector {
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    margin: 2px;
+}
+
+.color-option {
+    width: 29px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+#colorPalette {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}
