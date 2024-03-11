@@ -57,14 +57,38 @@
 // --------------------------------------------------------------
 // Ejercicio N2
 
-document.addEventListener('DOMContentLoaded', function() {
-    var colorOptions = document.querySelectorAll('.color-option');
-    var colorPalette = document.getElementById('colorPalette');
+// document.addEventListener('DOMContentLoaded', function() {
+//     var colorOptions = document.querySelectorAll('.color-option');
+//     var colorPalette = document.getElementById('colorPalette');
 
-    colorOptions.forEach(function(colorOption) {
-        colorOption.addEventListener('click', function() {
-            var color = this.style.backgroundColor;
-            colorPalette.style.backgroundColor = color;
-        });
+//     colorOptions.forEach(function(colorOption) {
+//         colorOption.addEventListener('click', function() {
+//             var color = this.style.backgroundColor;
+//             colorPalette.style.backgroundColor = color;
+//         });
+//     });
+// });
+
+
+// --------------------------------------------------------------
+// Ejercicio N3
+
+document.addEventListener('DOMContentLoaded', function() {
+    var resultadoElement = document.getElementById('resultado');
+    var sumarButton = document.getElementById('sumar');
+    var restarButton = document.getElementById('restar');
+
+    sumarButton.addEventListener('click', function() {
+        var numero1 = parseFloat(document.getElementById('numero1').value);
+        var numero2 = parseFloat(document.getElementById('numero2').value);
+        var resultado = numero1 + numero2;
+        resultadoElement.textContent = resultado;
+    });
+
+    restarButton.addEventListener('click', function() {
+        var numero1 = parseFloat(document.getElementById('numero1').value);
+        var numero2 = parseFloat(document.getElementById('numero2').value);
+        var resultado = numero1 - numero2;
+        resultadoElement.textContent = resultado < 0 ? 0 : resultado;
     });
 });
